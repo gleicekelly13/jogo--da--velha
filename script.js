@@ -34,7 +34,8 @@ function startGame() {
 }
 
 function handleClick() {
-    console.log('Célula Clicada')
+    const cell = e.target; //Obtém o elemento que foi clicado, neste caso, uma célula do tabuleiro
+    const classAtual = o_player ? o_class : x_class; //Define a classe que será usada para marcar a célula, dependendo de qual jogador é o atual
 }
 
 //Função que ajusta a aparência do tabuleiro com base no jogador que deve jogar a seguir
