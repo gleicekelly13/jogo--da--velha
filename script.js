@@ -2,6 +2,7 @@
 const cells = document.querySelectorAll('[data-cell]');
 const tabuleiro = document.getElementById('tabuleiro');
 const restartButton = document.getElementById('restartButton');
+let oTurn;
 
 /* Definição de constantes para as classes x e o. */
 const x_class = 'x';
@@ -18,3 +19,17 @@ const winning_combinattions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
+/* Função que inicia o jogo */
+function startGame() {
+    oTurn = false;  //Definição do estado inicial
+    cells.forEach(cell => {
+        cell.classList.remove(x_class);
+        cell.classList.remove(o_class);
+        cell.removeEventListener('click', () => console.log('Célula Clicada'));
+        cell.addEventListener('click', () => console.log('Célula Clicada'));
+    });
+}
+
+
+startGame();
