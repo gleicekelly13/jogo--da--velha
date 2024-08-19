@@ -2,7 +2,7 @@
 const cells = document.querySelectorAll('[data-cell]');
 const tabuleiro = document.getElementById('tabuleiro');
 const restartButton = document.getElementById('restartButton');
-let oTurn;
+let o_player;
 
 /* Definição de constantes para as classes x e o. */
 const x_class = 'x';
@@ -22,14 +22,24 @@ const winning_combinattions = [
 
 /* Função que inicia o jogo */
 function startGame() {
-    oTurn = false;  //Definição do estado inicial
+    o_player = false;  //Definição do estado inicial
     cells.forEach(cell => {
         cell.classList.remove(x_class);
         cell.classList.remove(o_class);
-        cell.removeEventListener('click', () => console.log('Célula Clicada'));
-        cell.addEventListener('click', () => console.log('Célula Clicada'));
+        cell.removeEventListener('click', handleClick);
+        cell.addEventListener('click', handleClick, { once : true});
     });
+
+    setBoardHoverClass();
 }
 
+function handleClick() {
+    console.log('Célula Clicada')
+}
+
+//Função que ajusta a aparência do tabuleiro com base no jogador que deve jogar a seguir
+function setBoardHoverClass() {
+    console.log('Define o visual do tabuleiro')
+}
 
 startGame();
