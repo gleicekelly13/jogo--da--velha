@@ -27,7 +27,7 @@ function startGame() {
         cell.classList.remove(x_class);
         cell.classList.remove(o_class);
         cell.removeEventListener('click', handleClick);
-        cell.addEventListener('click', handleClick, { once : true});
+        cell.addEventListener('click', handleClick, { once : true}); //{once:true} O ouvinte de evento será removido automaticamente após a primeira execução.
     });
 
     setBoardHoverClass();
@@ -37,8 +37,7 @@ function handleClick(e) {
     const cell = e.target; //Obtém o elemento que foi clicado, neste caso, uma célula do tabuleiro
     const classAtual = o_player ? o_class : x_class; //Define a classe que será usada para marcar a célula, dependendo de qual jogador é o atual
     cellMark(cell, classAtual);
-    swapPlayer();
-    
+
 }
 
 //Função que ajusta a aparência do tabuleiro com base no jogador que deve jogar a seguir
@@ -52,8 +51,34 @@ function cellMark(cell, classAtual) { //`cell` representa a célula que foi clic
     console.log(classAtual)
 }
 
-function swapPlayer() {
-    o_player = !o_player;
+function checkWin(classAtual) {  //Esqueleto da função que verifica a vitória
+    console.log(`Verfica se o jogador ${classAtual} venceu`)
+    return false;//Retorna false inicialmente para que o jogo continue
+} 
+
+//Função que mostra uma mensagem de vitória ou empate e reinicia o jogo
+function endGame(draw) {
+    if(draw) {
+        alert('Empate!')
+    } else {
+        alert(`${o_player ? 'O' : 'X'} Venceu!`);
+    }
+    startGame();
+}
+
+function isDraw() { //Esqueleto da função que verifica se está empatado
+    console.log("Verifica se está empatado")
+    return false;//Retorna false inicialmente para que o jogo continue
+}
+
+function swapPlayer() { //Alterna a variável o_player para trocar a vez entre os jogadores.
+    o_player = !o_player; //Inverte o valor atual de o_player. Se o_player era false, ele se torna true, e vice-versa. Isso faz com que os turnos alternem entre os jogadores "X" e "O".Se o_player é true, o próximo jogador a jogar será o X. Se for false, o próximo será o O.
+
+    /*if(o_player) {  
+        o_player = false;
+    } else {
+        o_player = true;
+    } Caso fosse feito com if/else */
 }
 
 startGame();
