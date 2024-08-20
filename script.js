@@ -35,14 +35,7 @@ function startGame() {
 
 function handleClick(e) {
     const cell = e.target; //Obtém o elemento que foi clicado, neste caso, uma célula do tabuleiro
-    let classAtual;
-      if(o_player) {
-         classAtual = o_class;
-         console.log(classAtual)
-      } else {
-        classAtual = x_class;
-        console.log(classAtual)
-      }
+    const classAtual = o_player ? o_class : x_class; //Define a classe que será usada para marcar a célula, dependendo de qual jogador é o atual
     cellMark(cell, classAtual);
     swapPlayer();
     
@@ -56,6 +49,7 @@ function setBoardHoverClass() {
 //Adiciona a classe X ou O à célula clicada.
 function cellMark(cell, classAtual) { //`cell` representa a célula que foi clicada; `classAtual` é a classe que representa o jogador atual
     cell.classList.add(classAtual); //Adicionando essa classe à célula
+    console.log(classAtual)
 }
 
 function swapPlayer() {
