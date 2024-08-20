@@ -37,6 +37,7 @@ function handleClick(e) {
     const cell = e.target; //Obtém o elemento que foi clicado, neste caso, uma célula do tabuleiro
     const classAtual = o_player ? o_class : x_class; //Define a classe que será usada para marcar a célula, dependendo de qual jogador é o atual
     cellMark(cell, classAtual);
+    swapPlayer();
 
 }
 
@@ -73,15 +74,11 @@ function isDraw() { //Esqueleto da função que verifica se está empatado
 
 function swapPlayer() { //Alterna a variável o_player para trocar a vez entre os jogadores.
     o_player = !o_player; //Inverte o valor atual de o_player. Se o_player era false, ele se torna true, e vice-versa. Isso faz com que os turnos alternem entre os jogadores "X" e "O".Se o_player é true, o próximo jogador a jogar será o X. Se for false, o próximo será o O.
-
-    /*if(o_player) {  
-        o_player = false;
-    } else {
-        o_player = true;
-    } Caso fosse feito com if/else */
 }
 
 startGame();
+
+restartButton.addEventListener('click', startGame);
 
 
  
