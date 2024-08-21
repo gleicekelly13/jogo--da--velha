@@ -67,9 +67,13 @@ function endGame(draw) {
     startGame();
 }
 
-function isDraw() { //Esqueleto da função que verifica se está empatado
-    console.log("Verifica se está empatado")
-    return false;//Retorna false inicialmente para que o jogo continue
+//Função que verifica se está empatado
+function isDraw() {  
+    return [...cells].every(cell => { /*O operador spread (...) converte a NodeList `cells` em um array regular. O método 
+                                        `every` verifica se todas as células do tabuleiro estão marcadas.*/
+        return cell.classList.contains(o_class) || cell.classList.contains(x_class); /* verifica se a célula foi marcada por 
+        um dos jogadores ( X ou O) */
+    }); 
 }
 
 function swapPlayer() { //Alterna a variável o_player para trocar a vez entre os jogadores.
