@@ -20,7 +20,7 @@ const winning_combinattions = [
     [2, 4, 6]
 ];
 
-/* Função que inicia o jogo */
+/*1° Função que inicia o jogo */
 function startGame() {
     o_player = false;  //Definição do estado inicial
     cells.forEach(cell => {
@@ -33,6 +33,7 @@ function startGame() {
     setBoardHoverClass();
 }
 
+/*2°  */
 function handleClick(e) {
     const cell = e.target; //Obtém o elemento que foi clicado, neste caso, uma célula do tabuleiro
     const classAtual = o_player ? o_class : x_class; //Define a classe que será usada para marcar a célula, dependendo de qual jogador é o atual
@@ -41,12 +42,18 @@ function handleClick(e) {
 
 }
 
-//Função que ajusta a aparência do tabuleiro com base no jogador que deve jogar a seguir
+//7° Função que ajusta a aparência do tabuleiro com base no jogador que deve jogar a seguir
 function setBoardHoverClass() {
-    console.log('Define o visual do tabuleiro')
+    tabuleiro.classList.remove(o_class); 
+    tabuleiro.classList.remove(x_class);
+    if(o_player) { //Significa que é a vez do jogador "O".
+        tabuleiro.classList.add(o_class); //Altera o estilo do tabuleiro ou indica que o próximo clique colocará um "O".
+    } else {  //Significa que é a vez do jogador "X".
+        tabuleiro.classList.add(x_class); //Ajusta a aparência do tabuleiro para refletir que um "X" será colocado na próxima jogada.
+    }
 }
 
-//Adiciona a classe X ou O à célula clicada.
+//3° Adiciona a classe X ou O à célula clicada.
 function cellMark(cell, classAtual) { //`cell` representa a célula que foi clicada; `classAtual` é a classe que representa o jogador atual
     cell.classList.add(classAtual); //Adicionando essa classe à célula
     console.log(classAtual)
@@ -57,7 +64,7 @@ function checkWin(classAtual) {  //Esqueleto da função que verifica a vitória
     return false;//Retorna false inicialmente para que o jogo continue
 } 
 
-//Função que mostra uma mensagem de vitória ou empate e reinicia o jogo
+//5° Função que mostra uma mensagem de vitória ou empate e reinicia o jogo
 function endGame(draw) {
     if(draw) {
         alert('Empate!')
@@ -67,7 +74,7 @@ function endGame(draw) {
     startGame();
 }
 
-//Função que verifica se está empatado
+//6° Função que verifica se está empatado
 function isDraw() {  
     return [...cells].every(cell => { /*O operador spread (...) converte a NodeList `cells` em um array regular. O método 
                                         `every` verifica se todas as células do tabuleiro estão marcadas.*/
@@ -76,7 +83,7 @@ function isDraw() {
     }); 
 }
 
-function swapPlayer() { //Alterna a variável o_player para trocar a vez entre os jogadores.
+function swapPlayer() { //4° Alterna a variável o_player para trocar a vez entre os jogadores.
     o_player = !o_player; //Inverte o valor atual de o_player. Se o_player era false, ele se torna true, e vice-versa. Isso faz com que os turnos alternem entre os jogadores "X" e "O".Se o_player é true, o próximo jogador a jogar será o X. Se for false, o próximo será o O.
 }
 
