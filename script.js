@@ -2,7 +2,7 @@
 const cells = document.querySelectorAll('[data-cell]');
 const tabuleiro = document.getElementById('tabuleiro');
 const restartButton = document.getElementById('restartButton');
-let o_player; 
+let o_player; //Controla de quem é a vez durante o jogo, alternando entre os jogadores que usam as marcas "X" e "O".
 
 /* Definição de constantes para as classes X e O. */
 const x_class = 'x';
@@ -40,13 +40,13 @@ function handleClick(e) {
                                                        dependendo de qual jogador é o atual*/
     cellMark(cell, classAtual);
 
-    if(checkWin(classAtual)) {
-        endGame(false);
-    } else if (isDraw()) {
-        endGame(true);
-    } else {
-        swapPlayer();
-        setBoardHoverClass();
+    if(checkWin(classAtual)) {  //Se houver um jogador vencedor...
+        endGame(false);  //...O jogo não termina por empate
+    } else if (isDraw()) {  //Se houver um empate...
+        endGame(true);  //...então o jogo termina por causa do empate
+    } else {  //Se não tem um vencedor e nem teve empate, o jogo continua...
+        swapPlayer();  //...alterna o jogador...
+        setBoardHoverClass();  //...e altera a classe do tabuleiro com base no jogador q vai jogar a seguir.
     }
     
 }
