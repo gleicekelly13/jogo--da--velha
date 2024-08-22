@@ -2,7 +2,7 @@
 const cells = document.querySelectorAll('[data-cell]');
 const tabuleiro = document.getElementById('tabuleiro');
 const restartButton = document.getElementById('restartButton');
-let o_player;
+let o_player; 
 
 /* Definição de constantes para as classes X e O. */
 const x_class = 'x';
@@ -36,10 +36,19 @@ function startGame() {
 /*2°  */
 function handleClick(e) {
     const cell = e.target; //Obtém o elemento que foi clicado, neste caso, uma célula do tabuleiro
-    const classAtual = o_player ? o_class : x_class; //Define a classe que será usada para marcar a célula, dependendo de qual jogador é o atual
+    const classAtual = o_player ? o_class : x_class; /*Define a classe que será usada para marcar a célula, 
+                                                       dependendo de qual jogador é o atual*/
     cellMark(cell, classAtual);
-    swapPlayer();
 
+    if(checkWin(classAtual)) {
+        endGame(false);
+    } else if (isDraw()) {
+        endGame(true);
+    } else {
+        swapPlayer();
+        setBoardHoverClass();
+    }
+    
 }
 
 //7° Função que ajusta a aparência do tabuleiro com base no jogador que deve jogar a seguir
