@@ -4,7 +4,7 @@ const tabuleiro = document.getElementById('tabuleiro');
 const restartButton = document.getElementById('restartButton');
 let o_player;
 
-/* Definição de constantes para as classes x e o. */
+/* Definição de constantes para as classes X e O. */
 const x_class = 'x';
 const o_class = 'o';
 
@@ -59,9 +59,16 @@ function cellMark(cell, classAtual) { //`cell` representa a célula que foi clic
     console.log(classAtual)
 }
 
-function checkWin(classAtual) {  //Esqueleto da função que verifica a vitória
-    console.log(`Verfica se o jogador ${classAtual} venceu`)
-    return false;//Retorna false inicialmente para que o jogo continue
+//Função que determina se o jogador atual venceu o jogo
+function checkWin(classAtual) { //classAtual indica a class atual que está sendo verificada
+    return winning_combinattions.some(combination => { /* `some`: Verifica se pelo menos uma das combinações vencedoras é 
+                                                           completamente preenchida pela classe do jogador atual.*/
+        return combination.every(index => { /*`every`: Verifica se todos os índices dentro de uma combinação específica 
+                                               estão marcados com a classe do jogador atual. */
+            return cells[index].classList.contains(classAtual); /*`index`: Representa a posição de uma célula no tabuleiro 
+                                                                    que está sendo verificada. */
+        });
+    });
 } 
 
 //5° Função que mostra uma mensagem de vitória ou empate e reinicia o jogo
