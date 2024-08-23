@@ -24,8 +24,9 @@ const winning_combinattions = [
 function startGame() {
     o_player = false;  //Definição do estado inicial
     cells.forEach(cell => {
-        cell.classList.remove(x_class);
         cell.classList.remove(o_class);
+        cell.classList.remove(x_class);
+        cell.textContent = ''; //Limpa o texto dentro da célula
         cell.removeEventListener('click', handleClick);
         cell.addEventListener('click', handleClick, { once : true}); //{once:true} O ouvinte de evento será removido automaticamente após a primeira execução.
     });
