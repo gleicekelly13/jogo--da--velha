@@ -39,6 +39,14 @@ body {
     cursor: pointer;
 }
 
+.cell.o {  /*Referencia diretamente o elemento com a classe cell que também possue a classe O.*/
+    color: red;
+}
+
+.cell.x { /*Referencia diretamente o elemento com a classe cell que também possue a classe X.*/
+    color: blue;
+} 
+
 #restartButton {
     padding: 10px 20px;
     border-radius: 8px;

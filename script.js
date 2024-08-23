@@ -65,7 +65,8 @@ function setBoardHoverClass() {
 //3° Adiciona a classe X ou O à célula clicada.
 function cellMark(cell, classAtual) { //`cell` representa a célula que foi clicada; `classAtual` é a classe que representa o jogador atual
     cell.classList.add(classAtual); //Adicionando essa classe à célula
-    console.log(classAtual)
+    cell.innerText = classAtual === x_class ? 'X' : 'O'; /*Adiciona as classes ao DOM e insere o texto correspondente 
+                                                           diretamente na célula.*/
 }
 
 //Função que determina se o jogador atual venceu o jogo
