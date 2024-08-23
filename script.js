@@ -31,6 +31,9 @@ function startGame() {
         cell.addEventListener('click', handleClick, { once : true}); //{once:true} O ouvinte de evento será removido automaticamente após a primeira execução.
     });
 
+    const mensagemElemento = document.getElementById('mensagem'); //Acessa o elemento HTML
+    mensagemElemento.textContent = ''; //Apaga a mensagem que estava sendo exibida antes, deixando o texto limpo
+
     setBoardHoverClass();
 }
 
@@ -84,12 +87,13 @@ function checkWin(classAtual) { //classAtual indica a class atual que está send
 
 //5° Função que mostra uma mensagem de vitória ou empate e reinicia o jogo
 function endGame(draw) {
+    const mensagemElemento = document.getElementById('mensagem'); //Seleciona o elemento com id mensagem
     if(draw) {
-        alert('Empate!')
+        mensagemElemento.innerText =  "Empate!"; //Coloca a mensagem "Empate!" no elemento mensagemElemento.
     } else {
-        alert(`${o_player ? 'O' : 'X'} Venceu!`);
+        mensagemElemento.innerText = `${o_player ? 'O' : 'X'} Venceu!`;  //Define o texto do elemento de mensagem para mostrar qual jogador venceu.
     }
-    startGame();
+    
 }
 
 //6° Função que verifica se está empatado
