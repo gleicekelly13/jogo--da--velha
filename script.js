@@ -33,6 +33,7 @@ function startGame() {
 
     const mensagemElemento = document.getElementById('mensagem'); //Acessa o elemento HTML
     mensagemElemento.textContent = ''; //Apaga a mensagem que estava sendo exibida antes, deixando o texto limpo
+    mensagemElemento.classList.remove('verde'); //Remove o fundo verde ao reiniciar o jogo
 
     setBoardHoverClass();
 }
@@ -92,6 +93,7 @@ function endGame(draw) {
         mensagemElemento.innerText =  "Empate!"; //Coloca a mensagem "Empate!" no elemento mensagemElemento.
     } else {
         mensagemElemento.innerText = `${o_player ? 'O' : 'X'} Venceu!`;  //Define o texto do elemento de mensagem para mostrar qual jogador venceu.
+        mensagemElemento.classList.add('verde');  //Adição da class verde ao elemento da mensagem
     }
     
 }

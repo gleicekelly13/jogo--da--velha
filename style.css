@@ -56,8 +56,19 @@ body {
 }
 
 #mensagem {
-    font-size: 1.5rem;
-    font-weight: 500;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px auto;
 }
+
+.verde {
+    background-color: #00ff00;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+} 
