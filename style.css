@@ -35,8 +35,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 3em;
     cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #e1e2f3;
 }
 
 .cell.o {  /*Referencia diretamente o elemento com a classe cell que também possue a classe O.*/
@@ -69,6 +73,6 @@ body {
     color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    transition: all 0.3s ease; /* Suaviza mudanças de estilo */
 } 
