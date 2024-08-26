@@ -77,6 +77,15 @@ body {
     transition: all 0.3s ease; /* Suaviza mudanças de estilo */
 } 
 
+.red {
+    background-color: #ff0000;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
 .vencedora {
     background-color: #00ff00;
 }
