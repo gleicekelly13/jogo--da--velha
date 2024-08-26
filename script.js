@@ -26,6 +26,7 @@ function startGame() {
     cells.forEach(cell => {
         cell.classList.remove(o_class);
         cell.classList.remove(x_class);
+        cell.classList.remove('vencedora'); //Remove a class vencedora 
         cell.textContent = ''; //Limpa o texto dentro da célula
         cell.removeEventListener('click', handleClick);
         cell.addEventListener('click', handleClick, { once : true}); //{once:true} O ouvinte de evento será removido automaticamente após a primeira execução.
@@ -76,14 +77,27 @@ function cellMark(cell, classAtual) { //`cell` representa a célula que foi clic
 
 //Função que determina se o jogador atual venceu o jogo
 function checkWin(classAtual) { //classAtual indica a class atual que está sendo verificada
-    return winning_combinattions.some(combination => { /* `some`: Verifica se pelo menos uma das combinações vencedoras é 
+    let vencedor = false;  //Indica se há um vencedor
+    winning_combinattions.some(combination => { /* `some`: Verifica se pelo menos uma das combinações vencedoras é 
                                                            completamente preenchida pela classe do jogador atual.*/
-        return combination.every(index => { /*`every`: Verifica se todos os índices dentro de uma combinação específica 
+        const venceu = combination.every(index => { /*`every`: Verifica se todos os índices dentro de uma combinação específica 
                                                estão marcados com a classe do jogador atual. */
             return cells[index].classList.contains(classAtual); /*`index`: Representa a posição de uma célula no tabuleiro 
                                                                     que está sendo verificada. */
         });
+
+        if(venceu) {  //Significa que encontrou uma combinação vencedora
+            combination.forEach (index => {  //Percorre todos os índices na combinação vencedora e executa a função de callback para cada célula.
+                cells[index].classList.add('vencedora'); //Para cada célula na combinação vencedora, adiciona a classe 'vencedora'.
+            });
+
+            vencedor = true; //Se uma combinação vencedora for encontrada, a variável vencedor é definida como true.
+        }
+
+        return venceu; //Encerra a iteração cedo se encontrar uma combinação vencedora.
     });
+
+    return vencedor;  //a função checkWin retorna o valor de `vencedor`
 } 
 
 //5° Função que mostra uma mensagem de vitória ou empate e reinicia o jogo
