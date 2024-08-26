@@ -77,4 +77,6 @@ body {
     transition: all 0.3s ease; /* Suaviza mudanças de estilo */
 } 
 
-
+.vencedora {
+    background-color: #00ff00;
+}
