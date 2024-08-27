@@ -22,13 +22,13 @@ const winning_combinattions = [
 
 /*1° Função que inicia o jogo */
 function startGame() {
-    o_player = false;  //Definição do estado inicial
-    cells.forEach(cell => {
-        cell.classList.remove(o_class);
-        cell.classList.remove(x_class);
+    o_player = false;  //Definição do estado inicial, neste caso, o jogador "X" começará o jogo
+    cells.forEach(cell => { //Itera sobre cada célula do tabuleiro, e executa a função de callback
+        cell.classList.remove(o_class); //Remove a classe associada ao jogador "O".
+        cell.classList.remove(x_class); //Remove a classe associada ao jogador "X".
         cell.classList.remove('vencedora'); //Remove a class vencedora 
         cell.textContent = ''; //Limpa o texto dentro da célula
-        cell.removeEventListener('click', handleClick);
+        cell.removeEventListener('click', handleClick);  //Remove o ouvinte de clique associado a handleClick de qualquer jogo anterior.
         cell.addEventListener('click', handleClick, { once : true}); //{once:true} O ouvinte de evento será removido automaticamente após a primeira execução.
     });
 
