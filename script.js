@@ -27,7 +27,7 @@ function startGame() {
         cell.classList.remove(o_class); //Remove a classe associada ao jogador "O".
         cell.classList.remove(x_class); //Remove a classe associada ao jogador "X".
         cell.classList.remove('vencedora'); //Remove a class vencedora 
-        cell.textContent = ''; //Limpa o texto dentro da célula
+        cell.textContent = ''; // Define o conteúdo de texto como "string vazia", limpando o texto dentro da célula
         cell.removeEventListener('click', handleClick);  //Remove o ouvinte de clique associado a handleClick de qualquer jogo anterior.
         cell.addEventListener('click', handleClick, { once : true}); //{once:true} O ouvinte de evento será removido automaticamente após a primeira execução.
     });
