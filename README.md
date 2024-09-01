@@ -3,5 +3,9 @@
 <p>Implementação simples de um jogo da velha utilizando HTML5, CSS3, e JavaScript. O jogo permite que dois jogadores joguem alternadamente, colocando "X" e "O" em um tabuleiro 3x3, e determina automaticamente o vencedor ou um empate.</p>
 <br>
 
-## :iphone: Mobile design
+## :desktop_computer: Desktop design
+<br>
+<div align = "center">
+<img src = "https://github.com/user-attachments/assets/a1b3b63d-6c7b-4b08-878f-ff8de3d38ba2" width = "600" />
+</div>
 <br>
