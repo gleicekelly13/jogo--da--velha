@@ -6,6 +6,6 @@
 ## :desktop_computer: Desktop design
 <br>
 <div align = "center">
-<img src = "https://github.com/user-attachments/assets/a1b3b63d-6c7b-4b08-878f-ff8de3d38ba2" width = "600" />
+<img src = "https://github.com/user-attachments/assets/a1b3b63d-6c7b-4b08-878f-ff8de3d38ba2" width = "500" />
 </div>
 <br>
