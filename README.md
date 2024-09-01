@@ -9,3 +9,6 @@
 <img src = "https://github.com/user-attachments/assets/a1b3b63d-6c7b-4b08-878f-ff8de3d38ba2" width = "500" />
 </div>
 <br>
+
+<h2 align="center">:hourglass: Status do projeto </h2>
+<h4>:white_check_mark: Desktop - FINALIZADO :white_check_mark: </h4>
