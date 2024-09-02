@@ -17,4 +17,5 @@
 <h2 align="center">:hammer: Funcionalidades do projeto </h2>
 <ul>
   <li>Jogo interativo: Os jogadores podem clicar nas células do tabuleiro para marcar "X" ou "O";</li>
+  <li>Detecção de vitória: O jogo detecta automaticamente quando um jogador vence, destacando a sequência vencedora em verde;</li>
 </ul>
