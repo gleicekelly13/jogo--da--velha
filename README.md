@@ -18,4 +18,5 @@
 <ul>
   <li>Jogo interativo: Os jogadores podem clicar nas células do tabuleiro para marcar "X" ou "O";</li>
   <li>Detecção de vitória: O jogo detecta automaticamente quando um jogador vence, destacando a sequência vencedora em verde;</li>
+  <li>Detecção de Empate: Caso todas as células sejam preenchidas sem um vencedor, o jogo informa que houve um empate;</li>
 </ul>
