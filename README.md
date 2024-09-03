@@ -20,4 +20,5 @@
   <li>Detecção de vitória: O jogo detecta automaticamente quando um jogador vence, destacando a sequência vencedora em verde;</li>
   <li>Detecção de Empate: Caso todas as células sejam preenchidas sem um vencedor, o jogo informa que houve um empate;</li>
   <li>Reiniciar jogo: Há um botão de reiniciar que limpa o tabuleiro e permite começar uma nova partida;</li>
+  <li>Feedback Visual: Exibição de mensagens e alteração de cores para indicar o resultado da partida.</li>
 </ul>
