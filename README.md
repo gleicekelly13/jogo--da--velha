@@ -22,3 +22,6 @@
   <li>Reiniciar jogo: Há um botão de reiniciar que limpa o tabuleiro e permite começar uma nova partida;</li>
   <li>Feedback Visual: Exibição de mensagens e alteração de cores para indicar o resultado da partida.</li>
 </ul>
+<br>
+
+<h2 align="center"> :dart: Objetivo de aprendizado/O que aprendi </h2>
