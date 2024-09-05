@@ -28,4 +28,5 @@
 <p>Neste projeto, pratiquei e aprendi conceitos fundamentais de desenvolvimento web, incluindo:</p>
 <ul>
   <li>Manipulação do DOM com JavaScript;</li>
+  <li>Criação e remoção de classes CSS dinamicamente;</li>
 </ul>
