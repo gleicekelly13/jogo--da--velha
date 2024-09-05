@@ -29,4 +29,5 @@
 <ul>
   <li>Manipulação do DOM com JavaScript;</li>
   <li>Criação e remoção de classes CSS dinamicamente;</li>
+  <li>Gerenciamento do estado do jogo e alternância entre jogadores;</li>
 </ul>
