@@ -33,3 +33,6 @@
   <li>Detecção de condições de vitória e empate;</li>
   <li>Implementação de feedback visual com base nos resultados do jogo.</li>
 </ul>
+<br>
+
+<h2 align="center"> :computer: Tecnologias utilizadas </h2>
