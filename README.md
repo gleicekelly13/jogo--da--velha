@@ -36,5 +36,8 @@
 <br>
 
 <h2 align="center"> :computer: Tecnologias utilizadas </h2>
-<p>HTML5: Estrutura do jogo</p>
-<p>CSS3: Estilização do tabuleiro e feedback visual para os jogadores.</p>
+<ul>
+  <li>HTML5: Estrutura do jogo</li>
+  <li>CSS3: Estilização do tabuleiro e feedback visual para os jogadores</li>
+  <li>JavaScript: Lógica do jogo, manipulação do DOM, e gerenciamento do estado do jogo</li>
+</ul>
