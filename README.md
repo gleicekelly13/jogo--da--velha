@@ -41,3 +41,6 @@
   <li>CSS3: Estilização do tabuleiro e feedback visual para os jogadores</li>
   <li>JavaScript: Lógica do jogo, manipulação do DOM, e gerenciamento do estado do jogo</li>
 </ul>
+<br>
+
+# :sunglasses: Desenvolvedora
