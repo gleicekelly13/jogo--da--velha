@@ -89,3 +89,21 @@ body {
 .vencedora {
     background-color: #00ff00;
 }
+
+@media screen and (max-width: 320px){
+    #tabuleiro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
+        grid-template-rows: repeat(3, 1fr); /* 3 linhas de tamanhos iguais */
+        gap: 5px;
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+    }
+}
