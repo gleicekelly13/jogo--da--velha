@@ -37,6 +37,7 @@ body {
     align-items: center;
     font-size: 3em;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona uma animação suave ao aparecer o "X" ou "O" na célula. */
 }
 
 .cell.o {  /*Referencia diretamente o elemento com a classe cell que também possue a classe O.*/
