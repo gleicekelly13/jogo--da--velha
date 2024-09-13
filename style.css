@@ -89,6 +89,17 @@ body {
 
 .vencedora {
     background-color: #00ff00;
+    animation: brilho 1s ease-in-out infinite alternate;  /* Animação que alterna o brilho */
+}
+
+@keyframes brilho {  /* Descreve como o brilho vai ser alterado ao longo do tempo. */
+    from { /* Início da animação */
+        box-shadow: 0 0 5px #00ff00; /* A sombra começa pequena e com uma suavidade de 5px em torno da célula */
+    }
+
+    to {  /* Final da animação */
+        box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;  /* A célula terá um brilho mais forte, com dois níveis de sombra */
+    }
 }
 
 @media screen and (max-width: 320px){
