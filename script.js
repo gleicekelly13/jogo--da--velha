@@ -4,6 +4,11 @@ const tabuleiro = document.getElementById('tabuleiro');
 const restartButton = document.getElementById('restartButton');
 let o_player; //Controla de quem é a vez durante o jogo, alternando entre os jogadores que usam as marcas "X" e "O".
 
+/* Variáveis que armazenam a contagem de vitórias de cada jogador */
+let xWins = 0;
+let oWins = 0;
+let drawCount = 0;
+
 /* Definição de constantes para as classes X e O. */
 const x_class = 'x';
 const o_class = 'o';
@@ -107,13 +112,25 @@ function endGame(draw) {
     if(draw) {
         mensagemElemento.innerText =  "Empate!"; //Coloca a mensagem "Empate!" no elemento mensagemElemento.
         mensagemElemento.classList.add('red');
+        drawCount++;
     } else {
         mensagemElemento.innerText = `${o_player ? 'O' : 'X'} Venceu!`;  //Define o texto do elemento de mensagem para mostrar qual jogador venceu.
         mensagemElemento.classList.add('verde');  //Adição da class verde ao elemento da mensagem
+        if(o_player) {
+            oWins++;
+        } else {
+            xWins++;
+        }
     }
+    updateScoreBoard();
     
 }
 
+function updateScoreBoard() {
+    document.getElementById('xWins').innerText = `Vitórias de X: ${xWins}`;
+    document.getElementById('oWins').innerText = `Vitórias de O: ${oWins}`;
+    document.getElementById('drawCount').innerText = `Empates ${drawCount}`;
+}
 
 //6° Função que verifica se está empatado
 function isDraw() {  
