@@ -19,6 +19,7 @@
 
 <h2 align="center">:hourglass: Status do projeto </h2>
 <h4>:white_check_mark: Desktop - FINALIZADO :white_check_mark: </h4>
+<h4>:white_check_mark: Mobile - FINALIZADO :white_check_mark: </h4>
 <br>
 
 <h2 align="center">:hammer: Funcionalidades do projeto </h2>
@@ -38,7 +39,8 @@
   <li>Criação e remoção de classes CSS dinamicamente;</li>
   <li>Gerenciamento do estado do jogo e alternância entre jogadores;</li>
   <li>Detecção de condições de vitória e empate;</li>
-  <li>Implementação de feedback visual com base nos resultados do jogo.</li>
+  <li>Implementação de feedback visual com base nos resultados do jogo;</li>
+  <li>Aplicação de animações CSS para melhorar a experiência visual do usuário.</li>
 </ul>
 <br>
 
