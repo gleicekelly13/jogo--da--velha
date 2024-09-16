@@ -114,6 +114,7 @@ function endGame(draw) {
     
 }
 
+
 //6° Função que verifica se está empatado
 function isDraw() {  
     return [...cells].every(cell => { /*O operador spread (...) converte a NodeList `cells` em um array regular. O método 
