@@ -4,10 +4,13 @@ const tabuleiro = document.getElementById('tabuleiro');
 const restartButton = document.getElementById('restartButton');
 let o_player; //Controla de quem é a vez durante o jogo, alternando entre os jogadores que usam as marcas "X" e "O".
 
-/* Variáveis que armazenam a contagem de vitórias de cada jogador */
+// Variáveis que armazenam a contagem de vitórias de cada jogador.
 let xWins = 0;
 let oWins = 0;
 let drawCount = 0;
+
+// Array vazio que armazenará o histórico das partidas.
+let gameHistory = [];
 
 /* Definição de constantes para as classes X e O. */
 const x_class = 'x';
@@ -144,6 +147,12 @@ function isDraw() {
 function swapPlayer() { //4° Alterna a variável o_player para trocar a vez entre os jogadores.
     o_player = !o_player; //Inverte o valor atual de o_player. Se o_player era false, ele se torna true, e vice-versa. Isso faz com que os turnos alternem entre os jogadores "X" e "O".Se o_player é true, o próximo jogador a jogar será o X. Se for false, o próximo será o O.
 }
+
+function saveGameResult(winner) {
+    gameHistory.push(winner ? `${winner} venceu` : "Empate");
+    console.log(gameHistory);
+}
+
 
 startGame();
 
