@@ -117,7 +117,7 @@ function endGame(draw) {
         mensagemElemento.innerText = `${o_player ? 'O' : 'X'} Venceu!`;  //Define o texto do elemento de mensagem para mostrar qual jogador venceu.
         mensagemElemento.classList.add('verde');  //Adição da class verde ao elemento da mensagem
         if(o_player) {
-            oWins++;
+            oWins++;  //Atualização da varíavel
         } else {
             xWins++;
         }
@@ -125,7 +125,7 @@ function endGame(draw) {
     updateScoreBoard();
     
 }
-
+//9° Função que exibe as pontuações
 function updateScoreBoard() {
     document.getElementById('xWins').innerText = `Vitórias de X: ${xWins}`;
     document.getElementById('oWins').innerText = `Vitórias de O: ${oWins}`;
