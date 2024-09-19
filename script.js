@@ -121,8 +121,10 @@ function endGame(draw) {
         mensagemElemento.classList.add('verde');  //Adição da class verde ao elemento da mensagem
         if(o_player) {
             oWins++;  //Atualização da varíavel
+            saveGameResult('O');
         } else {
             xWins++;
+            saveGameResult('X');
         }
     }
     updateScoreBoard();
@@ -148,11 +150,30 @@ function swapPlayer() { //4° Alterna a variável o_player para trocar a vez ent
     o_player = !o_player; //Inverte o valor atual de o_player. Se o_player era false, ele se torna true, e vice-versa. Isso faz com que os turnos alternem entre os jogadores "X" e "O".Se o_player é true, o próximo jogador a jogar será o X. Se for false, o próximo será o O.
 }
 
+// 10° Função que salva o resultado da partida no array gameHistory.
 function saveGameResult(winner) {
     gameHistory.push(winner ? `${winner} venceu` : "Empate");
-    console.log(gameHistory);
+    //console.log(gameHistory);
 }
 
+function showGameHistory() {
+    const historyElement = document.getElementById('history');
+    historyElement.innerHTML = "<h3>Histórico de Jogos</h3>";
+
+    if(gameHistory.length === 0) {
+        historyElement.innerHTML = "<p>Nenhuma partida registrada ainda.</p>"
+        return;
+    }
+
+    const ulElement = document.createElement('ul');
+    gameHistory.forEach((game, index) => {
+        const liElement = document.createElement('li');
+        liElement.textContent = `Partida ${index + 1}: ${game}`;
+        ulElement.appendChild(liElement);
+    });
+    
+    historyElement.appendChild(ulElement);
+}
 
 startGame();
 
