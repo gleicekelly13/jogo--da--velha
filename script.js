@@ -156,23 +156,17 @@ function saveGameResult(winner) {
     //console.log(gameHistory);
 }
 
+// 11° Função que mostra o histórico de partidas dentro de um elemento HTML
 function showGameHistory() {
-    const historyElement = document.getElementById('history');
-    historyElement.innerHTML = "<h3>Histórico de Jogos</h3>";
-
-    if(gameHistory.length === 0) {
-        historyElement.innerHTML = "<p>Nenhuma partida registrada ainda.</p>"
-        return;
-    }
-
-    const ulElement = document.createElement('ul'); //Cria um novo elemento <ul>
-    gameHistory.forEach((game, index) => {
-        const liElement = document.createElement('li');
-        liElement.textContent = `Partida ${index + 1}: ${game}`; // Define o texto do item da lista
-        ulElement.appendChild(liElement); // Adiciona o <li> à <ul>
+    const historyElement = document.getElementById('history'); /*Busca o elemento HTML com o ID history, 
+                                                                  onde o histórico de jogos será exibido. */
+    historyElement.innerHTML = "<h3>Histórico de Jogos</h3><ul>"; /* Define o conteúdo inicial do elemento history como um título,
+                                                                     seguido de uma lista, onde os resultados serão colocados. */
+    gameHistory.forEach((index, game) => {  /* Percorre cada item(cada partida) no array gameHistory */
+        historyElement.innerHTML += `<li>Partida ${index + 1}: ${game}</li>`;
     });
-    
-    historyElement.appendChild(ulElement); // Adiciona a lista completa à div 'history'
+
+    historyElement.innerHTML += "</ul>"; //Fecha a lista após adicionar todos os itens
 }
 
 startGame();
