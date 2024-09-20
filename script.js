@@ -165,14 +165,14 @@ function showGameHistory() {
         return;
     }
 
-    const ulElement = document.createElement('ul');
+    const ulElement = document.createElement('ul'); //Cria um novo elemento <ul>
     gameHistory.forEach((game, index) => {
         const liElement = document.createElement('li');
-        liElement.textContent = `Partida ${index + 1}: ${game}`;
-        ulElement.appendChild(liElement);
+        liElement.textContent = `Partida ${index + 1}: ${game}`; // Define o texto do item da lista
+        ulElement.appendChild(liElement); // Adiciona o <li> à <ul>
     });
     
-    historyElement.appendChild(ulElement);
+    historyElement.appendChild(ulElement); // Adiciona a lista completa à div 'history'
 }
 
 startGame();
