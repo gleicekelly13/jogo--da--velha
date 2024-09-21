@@ -115,16 +115,19 @@ function endGame(draw) {
     if(draw) {
         mensagemElemento.innerText =  "Empate!"; //Coloca a mensagem "Empate!" no elemento mensagemElemento.
         mensagemElemento.classList.add('red');
-        drawCount++;
+        drawCount++;  //Incrementa corretamente o número de empates
+        saveGameResult(null);  //Armazena o resultado como "empate" no histórico
+        updateScoreBoard();  //Atualiza o placar
+        return;  //Garante que o resto da função não seja executado quando o jogo empatar.
     } else {
         mensagemElemento.innerText = `${o_player ? 'O' : 'X'} Venceu!`;  //Define o texto do elemento de mensagem para mostrar qual jogador venceu.
         mensagemElemento.classList.add('verde');  //Adição da class verde ao elemento da mensagem
         if(o_player) {
-            oWins++;  //Atualização da varíavel
             saveGameResult('O');
+            oWins++;  //Atualiza a variavel para vitória de 'O'
         } else {
-            xWins++;
-            saveGameResult('X');
+            saveGameResult('X');  
+            xWins++;  //Atualiza a variavel para vitória de 'X'
         }
     }
     updateScoreBoard();
@@ -162,7 +165,7 @@ function showGameHistory() {
                                                                   onde o histórico de jogos será exibido. */
     historyElement.innerHTML = "<h3>Histórico de Jogos</h3><ul>"; /* Define o conteúdo inicial do elemento history como um título,
                                                                      seguido de uma lista, onde os resultados serão colocados. */
-    gameHistory.forEach((index, game) => {  /* Percorre cada item(cada partida) no array gameHistory */
+    gameHistory.forEach((game, index) => {  /* Percorre cada item(cada partida) no array gameHistory */
         historyElement.innerHTML += `<li>Partida ${index + 1}: ${game}</li>`;
     });
 
