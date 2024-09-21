@@ -93,6 +93,10 @@ body {
     animation: brilho 1s ease-in-out infinite alternate;  /* Animação que alterna o brilho */
 }
 
+#score {
+    margin-bottom: 10rem;
+}
+
 @keyframes brilho {  /* Descreve como o brilho vai ser alterado ao longo do tempo. */
     from { /* Início da animação */
         box-shadow: 0 0 5px #00ff00; /* A sombra começa pequena e com uma suavidade de 5px em torno da célula */
