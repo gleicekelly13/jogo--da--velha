@@ -103,6 +103,14 @@ body {
     gap: 15px;
 }
 
+#scoreBoard {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
 @keyframes brilho {  /* Descreve como o brilho vai ser alterado ao longo do tempo. */
     from { /* Início da animação */
         box-shadow: 0 0 5px #00ff00; /* A sombra começa pequena e com uma suavidade de 5px em torno da célula */
