@@ -111,6 +111,15 @@ body {
     gap: 6px;
 }
 
+#showHistory {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#showHistory:hover {
+    background-color: #e1e2f3;
+}
+
 @keyframes brilho {  /* Descreve como o brilho vai ser alterado ao longo do tempo. */
     from { /* Início da animação */
         box-shadow: 0 0 5px #00ff00; /* A sombra começa pequena e com uma suavidade de 5px em torno da célula */
