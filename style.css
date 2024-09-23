@@ -61,6 +61,10 @@ body {
     cursor: pointer;
 }
 
+#restartButton:hover {
+    background-color: #e1e2f3;
+}
+
 #mensagem {
     width: 200px;
     padding: 10px;
