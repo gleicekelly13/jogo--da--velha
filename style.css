@@ -139,6 +139,13 @@ body {
     }
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        margin-top: 15rem;
+    }
+}
+
 @media screen and (max-width: 320px){
     h1 {
         margin-bottom: 30px;
