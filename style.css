@@ -142,7 +142,11 @@ body {
 @media screen and (max-width: 768px) {
     body {
         flex-direction: column;
-        margin-top: 15rem;
+        margin-top: 10rem;
+    }
+
+    #score {
+        margin-bottom: 2rem;
     }
 }
 
