@@ -6,7 +6,7 @@
 ## :desktop_computer: Desktop design
 <br>
 <div align = "center">
-<img src = "https://github.com/user-attachments/assets/efb4e72f-cc52-4b57-8fec-1a73e87b8fa6" width = "500" />
+<img src = "https://github.com/user-attachments/assets/57238d0e-d4f9-496d-9552-e25ec565c770" width = "500" />
 </div>
 <br>
 
