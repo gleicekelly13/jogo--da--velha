@@ -13,7 +13,7 @@
 ## :iphone: Mobile design
 <br>
 <div align = "center">
-<img src = "https://github.com/user-attachments/assets/224d710c-95ec-4cf9-91c9-9290357f6362" width = "300" />
+<img src = "https://github.com/user-attachments/assets/5c5a0fec-71e2-4a10-9f22-25820cd472d3" width = "300" />
 </div>
 <br>
 
