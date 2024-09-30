@@ -41,7 +41,7 @@
   <li>Detecção de condições de vitória e empate;</li>
   <li>Utilização de estruturas como arrays para armazenar dados temporários e a percorrê-los usando o método forEach;</li>
   <li>Implementação de feedback visual com base nos resultados do jogo;</li>
-  <li>Aplicação de animações CSS para melhorar a experiência visual do usuário.</li>
+  <li>Aplicação de animações suaves usando `@keyframes` e `box-shadow` para melhorar a experiência visual do usuário sem comprometer a usabilidade.</li>
 </ul>
 <br>
 
